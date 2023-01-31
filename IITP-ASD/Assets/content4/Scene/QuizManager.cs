@@ -28,7 +28,7 @@ namespace QuizMgrUtil
         private void Start()
         {
             character = GameObject.Find("Character");
-            character.GetComponent<Character>().CharacterStopSpeaking();
+            //character.GetComponent<Character>().CharacterStopSpeaking();
 
             totalQuestion = QnA.Count;
             GoPanel.SetActive(false);
@@ -40,7 +40,7 @@ namespace QuizMgrUtil
         {
             if (QnA.Count > 0)
             {
-                character.GetComponent<Character>().CharacterStopSpeaking();
+                //character.GetComponent<Character>().CharacterStopSpeaking();
                 currentQuestion = Random.Range(0, QnA.Count);
                 QuestionText.text = QnA[currentQuestion].Question;
                 SetAnswers();
@@ -76,7 +76,7 @@ namespace QuizMgrUtil
 
         public void SpeakingResult(bool correct)
         {
-            character.GetComponent<Character>().CharacterStopSpeaking();
+            //character.GetComponent<Character>().CharacterStopSpeaking();
             if (correct)
                 character.GetComponent<Character>().CharacterSpeaking("맞았어");
             else

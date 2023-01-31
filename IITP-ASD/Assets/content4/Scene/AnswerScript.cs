@@ -19,14 +19,14 @@ public class AnswerScript : MonoBehaviour
             //GetComponent<Iage>().color = color.green;
             Debug.Log("맞았습니다.");
             quizManager.correct();
-            quizManager.GetComponent<QuizManager>().SpeakingResult(true);
+            //quizManager.GetComponent<QuizManager>().SpeakingResult(true);
         }
         else
         {
             //GetComponent<Image>().color = color.red;
             Debug.Log("틀렸습니다.");
             quizManager.wrong();
-            quizManager.GetComponent<QuizManager>().SpeakingResult(false);
+            //quizManager.GetComponent<QuizManager>().SpeakingResult(false);
         }
     }
 }
