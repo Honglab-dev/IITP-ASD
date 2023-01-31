@@ -3,19 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using VoiceMgrUtil; // using namespace VoiceMgrUtil
 
-public class Character : MonoBehaviour
+namespace CharacterUtil
 {
-    GameObject mgr;
-
-    void Start()
+    public class Character : MonoBehaviour
     {
-        Debug.Log("Ä³¸¯ÅÍ Script Start");
-        mgr = GameObject.Find("VoiceMgr");
-        mgr.GetComponent<VoiceMgr>().SpeakingAndListening();
-    }
+        GameObject voiceMgr;
 
-    // Update is called once per frame
-    void Update()
-    {
+        void Start()
+        {
+            voiceMgr = GameObject.Find("VoiceMgr");
+        }
+
+        public void CharacterSpeaking(string str)
+        {
+            voiceMgr.GetComponent<VoiceMgr>().Speaking(str);
+        }
+        
+        public void CharacterStopSpeaking()
+        {
+            voiceMgr.GetComponent<VoiceMgr>().StopSpeaking();
+        }
     }
 }

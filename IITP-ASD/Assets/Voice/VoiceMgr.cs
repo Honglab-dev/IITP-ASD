@@ -37,5 +37,10 @@ namespace VoiceMgrUtil
         {
             obj.GetComponent<Voice>().StartListening();
         }
+
+        public void StopSpeaking()
+        {
+            obj.GetComponent<Voice>().StopSpeaking();
+        }
     }
 }
