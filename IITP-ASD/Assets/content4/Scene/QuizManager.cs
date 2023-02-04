@@ -28,7 +28,6 @@ namespace QuizMgrUtil
         private void Start()
         {
             character = GameObject.Find("Character");
-            //character.GetComponent<Character>().CharacterStopSpeaking();
 
             totalQuestion = QnA.Count;
             GoPanel.SetActive(false);
@@ -40,7 +39,6 @@ namespace QuizMgrUtil
         {
             if (QnA.Count > 0)
             {
-                //character.GetComponent<Character>().CharacterStopSpeaking();
                 currentQuestion = Random.Range(0, QnA.Count);
                 QuestionText.text = QnA[currentQuestion].Question;
                 SetAnswers();
@@ -69,31 +67,32 @@ namespace QuizMgrUtil
             }
         }
 
-        void SpeakingQuestion(string str)
+        public void SpeakingQuestion(string str)
         {
             character.GetComponent<Character>().CharacterSpeaking(str);
         }
 
-        public void SpeakingResult(bool correct)
+        void SpeakingResult(bool correct)
         {
-            //character.GetComponent<Character>().CharacterStopSpeaking();
             if (correct)
-                character.GetComponent<Character>().CharacterSpeaking("맞았어");
-            else
+                character.GetComponent<Character>().CharacterSpeaking("맞았어!");
+            if (!correct)
                 character.GetComponent<Character>().CharacterSpeaking("틀렸어 다시 한 번 골라볼래?");
         }
 
         public void correct()
         {
+            SpeakingResult(true);
             score += 1;
             QnA.RemoveAt(currentQuestion);
-            makeQuestion();
+            Invoke("makeQuestion", 2f); // 2초 뒤에 makeQuestion() 실행
+            //makeQuestion();
             //StartCoroutine(waitForNext());
         }
 
         public void wrong()
         {
-
+            SpeakingResult(false);
             //QnA.RemoveAt(currentQuestion);
             //makeQuestion();
             //StartCoroutine(waitForNext());

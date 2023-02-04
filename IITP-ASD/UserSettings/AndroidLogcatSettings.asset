@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "R54R703692A",
+    "m_SelectedDeviceId": "R54M7021AZR",
     "m_SelectedPackage": {
-        "deviceId": "R54R703692A",
+        "deviceId": "R54M7021AZR",
         "name": "com.DefaultCompany.IITPASD",
-        "processId": 2433,
+        "processId": 29937,
         "exited": false
     },
     "m_SelectedPriority": 2,
@@ -168,6 +168,102 @@
             "deviceId": "R54R703692A",
             "name": "com.DefaultCompany.IITPASD",
             "processId": 2433,
+            "exited": false
+        },
+        {
+            "deviceId": "R54R703692A",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 3167,
+            "exited": false
+        },
+        {
+            "deviceId": "R9WR40PC5YJ",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 28189,
+            "exited": true
+        },
+        {
+            "deviceId": "R9WR40PC5YJ",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 28786,
+            "exited": true
+        },
+        {
+            "deviceId": "R9WR40PC5YJ",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 29429,
+            "exited": true
+        },
+        {
+            "deviceId": "R9WR40PC5YJ",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 29753,
+            "exited": true
+        },
+        {
+            "deviceId": "R9WR40PC5YJ",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 30102,
+            "exited": true
+        },
+        {
+            "deviceId": "R9WR40PC5YJ",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 2214,
+            "exited": false
+        },
+        {
+            "deviceId": "R9WR40PC5YJ",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 17370,
+            "exited": false
+        },
+        {
+            "deviceId": "R9WR40PC5YJ",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 17371,
+            "exited": false
+        },
+        {
+            "deviceId": "R9WR40PC5YJ",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 17998,
+            "exited": false
+        },
+        {
+            "deviceId": "R54M7021AZR",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 24869,
+            "exited": false
+        },
+        {
+            "deviceId": "R54M7021AZR",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 27634,
+            "exited": false
+        },
+        {
+            "deviceId": "R54M7021AZR",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 27682,
+            "exited": false
+        },
+        {
+            "deviceId": "R54M7021AZR",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 29567,
+            "exited": false
+        },
+        {
+            "deviceId": "R54M7021AZR",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 29606,
+            "exited": false
+        },
+        {
+            "deviceId": "R54M7021AZR",
+            "name": "com.DefaultCompany.IITPASD",
+            "processId": 29937,
             "exited": false
         }
     ],
