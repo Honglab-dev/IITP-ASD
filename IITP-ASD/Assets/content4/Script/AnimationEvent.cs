@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.UI;
+using UnityEngine.UI;
 //Handler
 public class AnimationEvent : MonoBehaviour
 { 
@@ -11,6 +11,8 @@ public class AnimationEvent : MonoBehaviour
 
     #region Members
     private Animator m_Animator;
+    
+    //public Button btn1;
     public GameObject Fruit1;
     public GameObject Fruit2;
     public GameObject Fruit3;
@@ -19,11 +21,13 @@ public class AnimationEvent : MonoBehaviour
     #endregion Members
 
     #region Methods
-
-    //Awake()->Start()
-    void Awake()
+   
+    void Awake()  //Awake()->Start()
     {
         m_Animator = GetComponent<Animator>();
+       
+        //btn1 = Find("Button1").GetComponent<Button>();
+ 
         Fruit1.gameObject.SetActive(false);
         Fruit2.gameObject.SetActive(false);
         Fruit3.gameObject.SetActive(false);
@@ -36,14 +40,15 @@ public class AnimationEvent : MonoBehaviour
         m_Animator.Play("GuestCharcterMove");
     }
 
-    public void OnEnterNextScene()
+    public void OnEnterNextScene() //After animation ends
     {
-        //After animation ends
-        Debug.Log("Active");
+
+        //btn1.interactable = false; // inactivation click
         Fruit1.gameObject.SetActive(true);
         Fruit2.gameObject.SetActive(true);
         Fruit3.gameObject.SetActive(true);
         Fruit4.gameObject.SetActive(true);
+        
     }
 
     #endregion Methods
