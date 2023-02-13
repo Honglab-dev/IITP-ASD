@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AnimationEvent : MonoBehaviour
 { 
  //#region~#endregion : CodeBlock
+
     #region Fields
     #endregion Fields
 
