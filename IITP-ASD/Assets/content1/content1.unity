@@ -216,8 +216,8 @@ GameObject:
   - component: {fileID: 143116409}
   - component: {fileID: 143116412}
   - component: {fileID: 143116411}
-  - component: {fileID: 143116410}
   - component: {fileID: 143116413}
+  - component: {fileID: 143116410}
   m_Layer: 0
   m_Name: TimerCircle
   m_TagString: Untagged
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143116408}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1121bd8afa6f31f4489cac0255f2348b, type: 3}
   m_Name: 
@@ -1190,6 +1190,10 @@ MonoBehaviour:
   Sound2:
   - {fileID: 8300000, guid: 10f63a15164c89e46baf646bfc3c5d4e, type: 3}
   - {fileID: 8300000, guid: ab500150d1ed9a94481e0b8ac131c65a, type: 3}
+  time: 5
+  TimerText: {fileID: 668936911}
+  Fill: {fileID: 143116410}
+  Max: 5
 --- !u!82 &1091653432
 AudioSource:
   m_ObjectHideFlags: 0
