@@ -12,6 +12,12 @@ public class RandomSound : MonoBehaviour
     int count = 0; //-> 다쓰면 지워야하나?
     string target;
 
+    public float time;
+    public Text TimerText;
+    public Image Fill;
+    public float Max;
+
+
     void Start()
     {
         AS = GetComponent<AudioSource>();
@@ -27,6 +33,15 @@ public class RandomSound : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        time -= Time.deltaTime;
+        TimerText.text = "" + (int)time;
+        Fill.fillAmount = 1 - (time / Max);
+
+        if (time < 0)
+            time = 0;
+    }
 
     void RandomPlay()
     {
@@ -42,25 +57,30 @@ public class RandomSound : MonoBehaviour
 
     public void ClickBtn() //버튼 누를때 호출
     {
-        //방금 클릭한 게임오브젝트
-        GameObject click = EventSystem.current.currentSelectedGameObject;
-
-        if (target == click.name)
+        if (time > 0)
         {
-            count++;
-            Debug.Log("정답입니다.");
-            AS.clip = Sound2[1];
-            AS.Play();
-            Debug.Log("count:" + count);
+            //방금 클릭한 게임오브젝트
+            GameObject click = EventSystem.current.currentSelectedGameObject;
+            Debug.Log(time);
+            if (target == click.name)
+            {
+                count++;
+                Debug.Log("정답입니다.");
+                AS.clip = Sound2[1];
+                AS.Play();
+                Debug.Log("count:" + count);
+            }
+            else
+            {
+                count++;
+                Debug.Log("틀렸습니다.");
+                AS.clip = Sound2[0]; //--> ★문제점: 음성을 출력하면 AS.clip의 이름이 바뀐다. 따라서 해당 과정으로는 정답도 오답으로 처리
+                AS.Play();
+                Debug.Log("count:" + count);
+
+            }
         }
         else
-        {
-            count++;
-            Debug.Log("틀렸습니다.");
-            AS.clip = Sound2[0]; //--> ★문제점: 음성을 출력하면 AS.clip의 이름이 바뀐다. 따라서 해당 과정으로는 정답도 오답으로 처리
-            AS.Play();
-            Debug.Log("count:" + count);
-
-        }
+            Debug.Log("시간초과");
     }
 }
