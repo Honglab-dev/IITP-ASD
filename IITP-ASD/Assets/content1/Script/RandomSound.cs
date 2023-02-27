@@ -18,7 +18,6 @@ public class RandomSound : MonoBehaviour
     public Image Fill;
     public float Max;
 
-
     void Start()
     {
         AS = GetComponent<AudioSource>();

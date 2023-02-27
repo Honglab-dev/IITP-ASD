@@ -10,7 +10,6 @@ public class Timer : MonoBehaviour
     public Image Fill;
     public float Max;
 
-
     void Update()
     {
 
