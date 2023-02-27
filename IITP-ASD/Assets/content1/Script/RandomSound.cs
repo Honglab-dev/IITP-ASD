@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class RandomSound : MonoBehaviour
 {
+
     public AudioClip[] Sound = new AudioClip[5]; //sound
     public AudioClip[] Sound2 = new AudioClip[2]; //correct,incorrect
     private AudioSource AS; //public가 붙으면 내가 지정할 수 있음

@@ -3,8 +3,8 @@ guid: 462dc393516366e4bbfe681866976a22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8801819111103863087
-    second: Timer_0
+      213: -8820052084179482687
+    second: Timer
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Timer_0
+      name: Timer
       rect:
         serializedVersion: 2
-        x: 501
-        y: 1423
-        width: 2229
-        height: 2150
+        x: 597
+        y: 1479
+        width: 2033
+        height: 2042
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d6e8690728a9d580800000000000000
-      internalID: -8801819111103863087
+      spriteID: 1c7c90e2c51e89580800000000000000
+      internalID: -8820052084179482687
       vertices: []
       indices: 
       edges: []
