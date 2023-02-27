@@ -62,7 +62,7 @@ public class RandomSound : MonoBehaviour
         {
             //방금 클릭한 게임오브젝트
             GameObject click = EventSystem.current.currentSelectedGameObject;
-            Debug.Log(time);
+            //Debug.Log(time);
             if (target == click.name)
             {
                 count++;
