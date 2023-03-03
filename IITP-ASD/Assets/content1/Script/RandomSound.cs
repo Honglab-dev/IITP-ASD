@@ -13,6 +13,7 @@ public class RandomSound : MonoBehaviour
     int count = 0; //-> 다쓰면 지워야하나?
     string target;
 
+
     public float time;
     public Text TimerText;
     public Image Fill;
