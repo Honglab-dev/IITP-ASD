@@ -10,9 +10,11 @@ public class RandomSound : MonoBehaviour
     public AudioClip[] Sound = new AudioClip[5]; //sound
     public AudioClip[] Sound2 = new AudioClip[2]; //correct,incorrect
     private AudioSource AS; //public가 붙으면 내가 지정할 수 있음
-    int count = 0; //-> 다쓰면 지워야하나?
-    string target;
 
+    int count = 0;
+    int corret = 0; //-> 다쓰면 지워야하나?
+    int incorrect = 0;
+    string target;
 
     public float time;
     public Text TimerText;
@@ -36,6 +38,12 @@ public class RandomSound : MonoBehaviour
 
     void Update()
     {
+        Timer();
+        
+    }
+    
+    void Timer()
+    {
         time -= Time.deltaTime;
         TimerText.text = "" + (int)time;
         Fill.fillAmount = 1 - (time / Max);
@@ -46,9 +54,9 @@ public class RandomSound : MonoBehaviour
 
     void RandomPlay()
     {
-        AS.clip = Sound[Random.Range(0, Sound.Length)];
+        AS.clip = Sound[Random.Range(0, Sound.Length)]; //random_play
         AS.Play();
-        Debug.Log(AS.clip.name);
+        //Debug.Log(AS.clip.name);
         target= AS.clip.name;
         Debug.Log("target:"+target);
         //Debug.Log(AS.clip.ToString()); //--> name + (UnityEngine.AudioClip)
