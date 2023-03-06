@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     public Text questionDisplayText;
     public Text scoreDisplayText;
     public Text timeRemainingDisplayText;
-    public SimpleObjcetPool answerButtonObjectPool;
+    //public SimpleObjcetPool answerButtonObjectPool;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
 
