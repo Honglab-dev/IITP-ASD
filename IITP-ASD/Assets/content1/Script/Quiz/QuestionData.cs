@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class QuestionData : MonoBehaviour
+[System.Serializable]
+public class QuestionData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string questionText;
+    //public AudioClip[] Sound = new AudioClip[2];
+    public AudioClip Sound;
+    public AnswerData[] answers; //이걸로 연결
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private AudioSource AS;
+
 }

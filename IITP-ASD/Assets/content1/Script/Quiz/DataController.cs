@@ -1,16 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DataController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public RoundData[] allRoundData;
+
+
     void Start()
     {
+        //DontDestroyOnLoad(gameobject);
+
+        //SceneManager.LoadScene("");
         
     }
 
-    // Update is called once per frame
+    public RoundData GetCurrentRoundData()
+    {
+        return allRoundData[0];
+    }
+
     void Update()
     {
         
